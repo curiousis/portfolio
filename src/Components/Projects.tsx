@@ -5,7 +5,7 @@ export default function Projects() {
     <div className='text-slate-50 h-40 w-full'>
         <div className='h-36 w-full'></div>
         <div>hej</div>
-        <div></div>
+        <div>hejsan</div>
         <div></div>
     </div>
   )
