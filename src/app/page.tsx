@@ -12,7 +12,8 @@ export default function Home() {
       <Header/>
       <Hero/>
       <About/>
-      <Projects></Projects>
+      <h3 className="font-size-2 font-bold text-xl text-slate-50 py-10">My Projects</h3>
+      <Projects/>
       <Contact/>
     </main>
   )

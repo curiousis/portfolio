@@ -1,12 +1,18 @@
+'use client'
 import React from 'react'
+import ProjectCard from './ProjectCard';
 
 export default function Projects() {
+  
+
   return (
-    <div className='text-slate-50 h-40 w-full'>
-        <div className='h-36 w-full'></div>
-        <div>hej</div>
-        <div>hejsan</div>
-        <div></div>
+    <div className='flex text-slate-50 h-1/2 w-full justify-evenly flex-wrap flex-auto'>
+      <ProjectCard/>
+      <ProjectCard/>
+      <ProjectCard/>    
+      <ProjectCard/>    
+      <ProjectCard/>    
+      <ProjectCard/>    
     </div>
   )
 }
