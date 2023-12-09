@@ -12,7 +12,7 @@ export default function ProjectCard() {
       };
   return (  
       <motion.div
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5,type: "spring", stiffness: 400, damping: 10 }}
         className='p-4 m-3 md:w-1/3 lg:w-auto md:mb-[5%]  flex flex-col sm:w-11/12 h-1/2 rounded-md'
         whileHover={{
           scale: 1.1,

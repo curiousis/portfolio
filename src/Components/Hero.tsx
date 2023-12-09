@@ -1,38 +1,29 @@
 'use client'
-import React from 'react';
+import React, { useRef } from 'react';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton, Link } from '@mui/material';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion,useScroll,useTransform } from 'framer-motion'; 
+
 
 export default function Hero() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
-
-  const animation = inView ? 'visible' : 'hidden';
-
-  const animationVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 50 },
-    
-  };
-
+const targetRef = useRef<HTMLDivElement>(null)
+const {scrollYProgress} = useScroll({
+  target: targetRef,
+  offset: ['end end', 'end start'],
+})
+const scale = useTransform(scrollYProgress, [0, .5], [1, .6])
+const opacity = useTransform(scrollYProgress, [0, .5], [1, 0])
   return (
     <motion.section
-      ref={ref}
-      initial='hidden'
-      animate={animation}
-      variants={animationVariants}
+    style={{opacity,scale}}
+    transition={{duration:1}}
+      ref={targetRef}
       className='w-full h-1/3 flex justify-between items-center'
     >
       <motion.div
-        initial={{ x: '-100%', opacity: 0.5 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
         className='w-1/3'
       >
         <img src="/isra.png" alt="photo of israel with a black headsock and a black jacket" />

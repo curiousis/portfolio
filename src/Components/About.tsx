@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useRef} from 'react'
+import { motion,useScroll,useTransform } from 'framer-motion'; 
 
 export default function About() {
   return (
@@ -9,7 +10,7 @@ export default function About() {
         </div>
         <p className='w-4/5 text-slate-50 p-4 text-lg'>
             My interest in programming started as a kid’s dream and then become something more that just a dream years later.
-            I have been programming for almost two years now. Most of my programming has  been focused around web-dev.  My knowledge in programming consist of bootstrap, tailwind, js, typescript, node-js, next-js, figma(for designing) and css. 
+            I have been programming for almost two years now. Most of my programming has  been focused around web-dev. My knowledge in programming consist of bootstrap, tailwind, js, typescript, node-js, next-js, figma(for designing) and css. 
         </p>
     </section>
   )
