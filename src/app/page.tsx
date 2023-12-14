@@ -4,7 +4,7 @@ import Hero from "@/Components/Hero";
 import About from "@/Components/About";
 import Contact from "@/Components/Contact";
 import Projects from "@/Components/Projects";
-
+import RootLayout from "./layout";
 
 export default function Home() {
   return (
